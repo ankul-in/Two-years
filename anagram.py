@@ -1,4 +1,4 @@
-# 14 to check if string is anagram
+# 14 to check if string is anagram or not
 a=input("enter first string-->")
 b=input("enter second string-->")
 length=len(a)
