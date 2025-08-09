@@ -5,10 +5,22 @@ while True:
     if string.lower=="exit":
         break
     else:
-        strArray=string.split()
-        print(strArray)
-        random.shuffle(strArray)
-        string=" ".join(strArray)
-        print(string)
+        if " " in string.split():
+            strArray=string.split()
+            print(strArray)
+            random.shuffle(strArray)
+            string=" ".join(strArray)
+        else:
+            strArray=list(string)
+            print(strArray)
+            random.shuffle(strArray)
+            string="".join(strArray)
+        # elif "\n" in string.split():
+        #     strArray=string.split()
+        #to add sentence in future
+    
+    print(string)
+
+        
 
         
