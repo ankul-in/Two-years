@@ -9,6 +9,3 @@ def smallestInArray(arr):
             smallestIndex=i
     return print("the smallest number in array is-->",smallest,"at the index",smallestIndex)
     
-arr=[]
-arr=arrayInput()
-smallestInArray(arr)
