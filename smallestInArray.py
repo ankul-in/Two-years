@@ -1,4 +1,5 @@
 #wap smallest number in array
+from arrayInput import arrayInput
 def smallestInArray(arr):
     smallest=arr[0]
     smallestIndex=0
@@ -8,8 +9,5 @@ def smallestInArray(arr):
             smallestIndex=i
     print("the smallest number in array is-->",smallest,"at the index",smallestIndex)
 arr=[]
-n=int(input("enter number of digits in array"))
-for i in range(n):
-    x=int(input("enter digit-->"))
-    arr.append(x)
+arr=arrayInput()
 smallestInArray(arr)
