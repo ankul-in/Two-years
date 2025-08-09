@@ -7,7 +7,8 @@ def smallestInArray(arr):
         if smallest>arr[i]:
             smallest=arr[i]
             smallestIndex=i
-    print("the smallest number in array is-->",smallest,"at the index",smallestIndex)
+    return print("the smallest number in array is-->",smallest,"at the index",smallestIndex)
+    
 arr=[]
 arr=arrayInput()
 smallestInArray(arr)
