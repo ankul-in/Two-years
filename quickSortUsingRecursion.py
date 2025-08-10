@@ -17,4 +17,4 @@ def quickSort(arr):
     
 print(quickSort([6,5,4,7,8,2,9,1,3]))
                 
-    #hell yeah on second try
+    #hell yeah on second try 41
