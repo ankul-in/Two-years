@@ -27,9 +27,9 @@ def searchPeople(people):
                 print("mango Seller is-->",person)
                 return True
             else:
-                searchQueue=searchQueue+graph[person]
+                searchQueue+=graph[person]
                 searched.append(person)
-        return False
+    return False
     
 searchPeople("you")
 
