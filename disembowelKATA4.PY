@@ -1,3 +1,4 @@
+#disemvowel a string to hide bad words and sentences . 
 def disemvowel(string_):
     x=list(string_)
     for i in x:
