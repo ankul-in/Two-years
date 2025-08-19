@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#kata https://www.codewars.com/kata/57fd696e26b06857eb0011e7/train/python
 def dative(word):
     rev=word[::-1]
     for i in rev:
