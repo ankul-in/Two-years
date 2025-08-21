@@ -1,3 +1,5 @@
+#kata
+
 def sort_the_inner_content(words):
     word=words.split()
     newlist=[]
