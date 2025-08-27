@@ -56,3 +56,24 @@ def substractLinkedLists(l1,l2):
     else:
         return subtract(l2,l1)
     
+#test case
+
+def createLinkedList(num):
+    digit=[int(d) for d in str(num)]
+    dummy = ListNode(0)
+    curr=dummy
+    for d in digit:
+        curr.next=ListNode(d)
+        curr=curr.next
+    return dummy.next
+def printLinkedList(head):
+    result=[]
+    while head:
+        result.append(str(head.val))
+        head=head.next
+    print("->".join(result))
+l1=createLinkedList(int(input("enter your first number->")))
+
+l2=createLinkedList(int(input("enter your second number->")))
+result=substractLinkedLists(l1,l2)
+printLinkedList(result)
