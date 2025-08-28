@@ -47,3 +47,41 @@ mo2=batRegex.search("the Adventures of Batwoman")
 print(mo2.group())
 
 
+#* operator
+batRegex=re.compile(r"Bat(wo)*man")
+mo1=batRegex.search("the adventures of Batwowowowowowowowowoman")
+print(mo1.group())
+
+
+greedyHaRegex=re.compile(r"(Ha){3,5}")
+mo1=greedyHaRegex.search("HaHaHaHaHa")
+print(mo1.group())
+nongreedyHaRegex=re.compile(r"(Ha){3,5}?")
+mo2=nongreedyHaRegex.search("HaHaHaHaHaHa")
+print(mo2.group())
+
+phoneNumRegex=re.compile(r"\d\d\d-\d\d\d-\d\d\d\d")
+phoneNumRegex.findall("cell: 123-456-7890 , work: 098-765-4321")
+
+
+xmasRegex=re.compile(r"\d+\s\w+")
+x=xmasRegex.findall("12 drummers, 11 pipers , 10 lords , 9 ladies , 8 maids 7 swans 6 geese 5 rings 4 birds , 3 hens")
+print(x)
+
+
+vowelRegex=re.compile(r"[aeiouAEIOU]")
+x=vowelRegex.findall("RoboCop eats baby food. BABY FOOd.")
+print(x)
+
+consonantRegex=re.compile(r"[^aeiouAEIOU]")
+x=consonantRegex.findall("RoboCop eats Baby Food. BABYFOOD!!!")
+print(x)
+#^ is start $ is end
+
+
+atRegex=re.compile(r".at")
+x=atRegex.findall("The cat in the hat sat on the flat mat eating rat.")
+print(x)
+
+
+# .* is anything
