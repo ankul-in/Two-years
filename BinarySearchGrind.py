@@ -1,24 +1,24 @@
-#binarySearch 
-def binarySearch(arr,x):
-    low=0
-    high=len(arr)-1
-    while low<=high:
-        mid=low+(high-low)//2
-        if arr[mid]==x:
-            return mid
-        elif arr[mid]<x:
-            low=mid+1
-        else:
-            high=mid-1
+# #binarySearch 
+# def binarySearch(arr,x):
+#     low=0
+#     high=len(arr)-1
+#     while low<=high:
+#         mid=low+(high-low)//2
+#         if arr[mid]==x:
+#             return mid
+#         elif arr[mid]<x:
+#             low=mid+1
+#         else:
+#             high=mid-1
 
 
-arr=[2,3,4,10,40]
-x=10
-result=binarySearch(arr,x)
-if result !=-1:
-    print("element is present at index-", result)
-else:
-    print("enement no present in array")
+# arr=[2,3,4,10,40]
+# x=10
+# result=binarySearch(arr,x)
+# if result !=-1:
+#     print("element is present at index-", result)
+# else:
+#     print("enement no present in array")
 
 
 
