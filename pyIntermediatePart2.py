@@ -145,21 +145,45 @@
 # np.random.shuffle(arr)
 # print(arr)
 
+# import functools
+# # @mydecorator
+# # def dosomething():
+# #     pass
+# def start_end_decorator(func):
+#     @functools.wraps(func)
+#     def wrapper():
+#         print("start")
+#         func()
+#         print("end")
+#     return wrapper
+# @start_end_decorator
+# # def print_name():
+# #     print("alex")
+# # print_name=start_end_decorator(print_name)
+# # print_name()
+# def add5(x):
+#     return x+5
+# print(help(add5))
+# print(add5.__name__)
 
-# @mydecorator
-# def dosomething():
-#     pass
-def start_end_decorator(func):
-    def wrapper():
-        print("start")
-        func()
-        print("end")
-    return wrapper
-@start_end_decorator
-# def print_name():
-#     print("alex")
-# print_name=start_end_decorator(print_name)
-# print_name()
-def add5(x):
-    return x+5
-add5(10)
+
+# import functools
+
+# def repeat(num_times):
+#     def decorator_repeat(func):
+#         @functools.wraps(func)
+#         def wrapper(args,**kwargs):
+#             for i in range(num_times):
+#                 result=func(args,**kwargs)
+#             return result
+#         return wrapper
+#     return decorator_repeat
+
+
+# @repeat(num_times=3)
+# def greet(name):
+#     print(f"hello {name}")
+
+# greet("alex")
+
+
