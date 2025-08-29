@@ -87,4 +87,8 @@ def binarySearch(arr,x):
         elif arr[mid]<x:
             low=mid+1
     return -1
+<<<<<<< HEAD
 print(binarySearch(arr,33))
+=======
+print(binarySearch(arr,33))
+>>>>>>> c2598b151217cfee673986a5c48752d5c5de5d96
