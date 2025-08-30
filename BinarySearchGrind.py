@@ -76,19 +76,81 @@ x=10
 # print(binarySearch(arr,2))
 
 
+# def binarySearch(arr,x):
+#     low,high=0,len(arr)-1
+#     while low<=high:
+#         mid=low+(high-low)//2
+#         if arr[mid]==x:
+#             return mid
+#         elif arr[mid]>x:
+#             high=mid-1
+#         elif arr[mid]<x:
+#             low=mid+1
+#     return -1
+# print(binarySearch(arr,33))
+
+
+
+# def binarySearch(arr,x):
+#     low,high=0,len(arr)-1
+#     while low<=high:
+#         mid=low+(high-low)//2
+#         if arr[mid]==x:
+#             return mid
+#         elif arr[mid]>x:
+#             high=mid-1
+#         else:
+#             low=mid+1
+#     return -1
+
+# print(binarySearch(arr,3))
+
+
+# def binarySearch(arr,x):
+#     start,end=0,len(arr)-1
+#     while start<=end:
+#         mid=start+(end-start)//2
+#         if arr[mid]==x:
+#             return mid
+#         elif arr[mid]>x:
+#             end=mid-1
+#         else:
+#             start=mid+1
+#     return -1
+# print(binarySearch(arr,2))
+
+
+
 def binarySearch(arr,x):
-    low,high=0,len(arr)-1
-    while low<=high:
-        mid=low+(high-low)//2
+    first,last=0,len(arr)-1
+    while first <=last:
+        mid=first+(last-first)//2
         if arr[mid]==x:
             return mid
         elif arr[mid]>x:
-            high=mid-1
-        elif arr[mid]<x:
-            low=mid+1
-    return -1
-<<<<<<< HEAD
-print(binarySearch(arr,33))
-=======
-print(binarySearch(arr,33))
->>>>>>> c2598b151217cfee673986a5c48752d5c5de5d96
+            first=mid+1
+        else:
+            last=mid-1
+    return 1
+
+print(binarySearch(arr,2))
+
+# i dont think ima ever forget binary search tho
+
+
+# def binarySearch(arr,x):
+#     start,end=0,len(arr)-1
+#     while start<=end:
+#         mid=start+(end-start)//2
+#         if arr[mid]==x:
+#             return mid
+#         elif arr[mid]<x:
+#             start=mid+1
+#         else:
+#             end=mid-1
+#     return -1
+
+# print(binarySearch(arr,5))
+
+
+#yeah
