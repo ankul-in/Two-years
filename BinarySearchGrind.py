@@ -121,19 +121,19 @@ x=10
 
 
 
-def binarySearch(arr,x):
-    first,last=0,len(arr)-1
-    while first <=last:
-        mid=first+(last-first)//2
-        if arr[mid]==x:
-            return mid
-        elif arr[mid]>x:
-            first=mid+1
-        else:
-            last=mid-1
-    return 1
+# def binarySearch(arr,x):
+#     first,last=0,len(arr)-1
+#     while first <=last:
+#         mid=first+(last-first)//2
+#         if arr[mid]==x:
+#             return mid
+#         elif arr[mid]>x:
+#             first=mid+1
+#         else:
+#             last=mid-1
+#     return 1
 
-print(binarySearch(arr,2))
+# print(binarySearch(arr,2))
 
 # i dont think ima ever forget binary search tho
 
@@ -154,3 +154,18 @@ print(binarySearch(arr,2))
 
 #sorry i forgot the number
 #yeah
+
+
+
+def binarySearch(arr,low,high,x):
+    if high<low:
+        return -1
+    mid=low+(high-low)//2
+    if arr[mid]==x:
+        return mid
+    elif arr[mid]>x:
+        return binarySearch(arr,low,mid-1,x)
+    elif arr[mid]<x:
+        return binarySearch(arr,mid+1,high,x)
+    
+print(binarySearch(arr,0,len(arr)-1,10))
