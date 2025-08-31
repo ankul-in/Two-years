@@ -1,0 +1,57 @@
+# #bfs algorithm
+# #still didnt learn dfs yet but anyways 
+# def bfs(adj):
+#     V=len(adj)
+#     res=[]
+#     s=0
+#     from collections import deque
+#     q=deque()
+#     visited=[False]*V
+#     visited[s]=True
+#     q.append(s)
+#     while q:
+#         curr=q.popleft()
+#         res.append(curr)
+#         for x in adj[curr]:
+#             if not visited[x]:
+#                 visited[x]=True
+#                 q.append(x)
+#     return res
+# if __name__=="__main__":
+#     adj = [[1,2], [0,2,3], [0,4], [1,4], [2,3]]
+#     ans=bfs(adj)
+#     for i in ans:
+#         print(i, end=" ")
+
+
+
+#BFS of the Disconnected Graph
+from collections import deque
+def bfsOfGraph(adj,s,visited,res):
+    q=deque()
+    visited[s]=True
+    q.append(s)
+    while q:
+        curr=q.popleft()
+        res.append(curr)
+        for x in adj[curr]:
+            if not visited[x]:
+                visited[x]=True
+                q.append(x)
+    return res
+
+def bfsDisconnected(adj):
+    V=len(adj)
+    res=[]
+    visited=[False]*V
+    for i in range(V):
+        if not visited[i]:
+            bfsOfGraph(adj,i,visited,res)
+    return res
+
+if __name__=="__main__":
+    adj = [[1,2], [0,2,3], [0,4], [1,4], [2,3]]
+    ans=bfsDisconnected(adj)
+    for i in ans:
+        print(i,end=" ")
+#todo tommorow grind both bfs and dfs 
