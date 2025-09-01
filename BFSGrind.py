@@ -26,8 +26,38 @@
 
 
 #BFS of the Disconnected Graph
+# from collections import deque
+# def bfsOfGraph(adj,s,visited,res):
+#     q=deque()
+#     visited[s]=True
+#     q.append(s)
+#     while q:
+#         curr=q.popleft()
+#         res.append(curr)
+#         for x in adj[curr]:
+#             if not visited[x]:
+#                 visited[x]=True
+#                 q.append(x)
+#     return res
+
+# def bfsDisconnected(adj):
+#     V=len(adj)
+#     res=[]
+#     visited=[False]*V
+#     for i in range(V):
+#         if not visited[i]:
+#             bfsOfGraph(adj,i,visited,res)
+#     return res
+
+# if __name__=="__main__":
+#     adj = [[1,2], [0,2,3], [0,4], [1,4], [2,3]]
+#     ans=bfsDisconnected(adj)
+#     for i in ans:
+#         print(i,end=" ")
+# #todo tommorow grind both bfs and dfs 
+
 from collections import deque
-def bfsOfGraph(adj,s,visited,res):
+def bfsofGraph(adj,s,visited,res):
     q=deque()
     visited[s]=True
     q.append(s)
@@ -46,12 +76,11 @@ def bfsDisconnected(adj):
     visited=[False]*V
     for i in range(V):
         if not visited[i]:
-            bfsOfGraph(adj,i,visited,res)
+            bfsofGraph(adj,i,visited,res)
     return res
 
 if __name__=="__main__":
-    adj = [[1,2], [0,2,3], [0,4], [1,4], [2,3]]
+    adj=[[1,2],[0,2,3],[0,4],[1,4],[2,3]]
     ans=bfsDisconnected(adj)
     for i in ans:
         print(i,end=" ")
-#todo tommorow grind both bfs and dfs 
