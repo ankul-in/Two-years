@@ -157,15 +157,32 @@ x=10
 
 
 
-def binarySearch(arr,low,high,x):
-    if high<low:
-        return -1
-    mid=low+(high-low)//2
-    if arr[mid]==x:
-        return mid
-    elif arr[mid]>x:
-        return binarySearch(arr,low,mid-1,x)
-    elif arr[mid]<x:
-        return binarySearch(arr,mid+1,high,x)
+# def binarySearch(arr,low,high,x):
+#     if high<low:
+#         return -1
+#     mid=low+(high-low)//2
+#     if arr[mid]==x:
+#         return mid
+#     elif arr[mid]>x:
+#         return binarySearch(arr,low,mid-1,x)
+#     elif arr[mid]<x:
+#         return binarySearch(arr,mid+1,high,x)
     
-print(binarySearch(arr,0,len(arr)-1,10))
+# print(binarySearch(arr,0,len(arr)-1,10))
+
+
+
+
+def binarySearch(arr,x):
+    front,back=0,len(arr)-1
+    while front <= back:
+        mid=front+(back-front)//2
+        if arr[mid]==x:
+            return mid
+        elif arr[mid]>x:
+            back=mid-1
+        else:
+            front=mid+1
+    return -1
+
+print(binarySearch([1,2,3,4,5,6,7,8,9],9))
