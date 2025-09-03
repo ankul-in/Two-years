@@ -1,4 +1,4 @@
-# #bfs algorithm
+# #bfs algorithm #154
 # #still didnt learn dfs yet but anyways 
 # def bfs(adj):
 #     V=len(adj)
@@ -86,6 +86,34 @@
 #         print(i,end=" ")
 
 
+# from collections import deque
+# def bfsOfGraph(adj,s,visited,res):
+#     q=deque()
+#     visited[s]=True
+#     q.append(s)
+#     while q:
+#         curr=q.popleft()
+#         res.append(curr)
+#         for x in adj[curr]:
+#             if not visited[x]:
+#                 visited[x]=True
+#                 q.append(x)
+#     return res
+# def bfsDisconnected(adj):
+#     V=len(adj)
+#     res=[]
+#     visited=[False]*V
+#     for i in range(V):
+#         if not visited[i]:
+#             bfsOfGraph(adj,i,visited,res)
+#     return res
+# if __name__=="__main__":
+#     adj=[[1,2],[0,2,3],[0,4],[1,4],[2,3]]
+#     ans=bfsDisconnected(adj)
+#     for i in ans:
+#         print(i,end=" ")
+
+#         #still nothing feel nothing cant remember tthis
 from collections import deque
 def bfsOfGraph(adj,s,visited,res):
     q=deque()
@@ -98,7 +126,9 @@ def bfsOfGraph(adj,s,visited,res):
             if not visited[x]:
                 visited[x]=True
                 q.append(x)
+
     return res
+
 def bfsDisconnected(adj):
     V=len(adj)
     res=[]
@@ -107,10 +137,9 @@ def bfsDisconnected(adj):
         if not visited[i]:
             bfsOfGraph(adj,i,visited,res)
     return res
+
 if __name__=="__main__":
-    adj=[[1,2],[0,2,3],[0,4],[1,4],[2,3]]
+    adj=[[5,1],[7,1],[3,1],[6,1],[],[],[],[]]
     ans=bfsDisconnected(adj)
     for i in ans:
         print(i,end=" ")
-
-        #still nothing feel nothing cant remember tthis
