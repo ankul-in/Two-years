@@ -1,4 +1,4 @@
-# #binarySearch 
+# #binarySearch  #145
 # def binarySearch(arr,x):
 #     low=0
 #     high=len(arr)-1
@@ -173,16 +173,33 @@ x=10
 
 
 
+# def binarySearch(arr,x):
+#     front,back=0,len(arr)-1
+#     while front <= back:
+#         mid=front+(back-front)//2
+#         if arr[mid]==x:
+#             return mid
+#         elif arr[mid]>x:
+#             back=mid-1
+#         else:
+#             front=mid+1
+#     return -1
+
+# print(binarySearch([1,2,3,4,5,6,7,8,9],9))
+
+
 def binarySearch(arr,x):
-    front,back=0,len(arr)-1
-    while front <= back:
-        mid=front+(back-front)//2
+    start,end=0,len(arr)-1
+    while start<=end:
+        mid=start+(end-start)//2
         if arr[mid]==x:
             return mid
+        elif arr[mid]<x:
+            start=mid+1
         elif arr[mid]>x:
-            back=mid-1
-        else:
-            front=mid+1
+            end=mid-1
     return -1
 
-print(binarySearch([1,2,3,4,5,6,7,8,9],9))
+print(binarySearch([1,2,3,4,5,6,7,8],6))
+
+#yeah i kinda get this now 
