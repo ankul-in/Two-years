@@ -12,8 +12,8 @@
 #             high=mid-1
 
 
-arr=[2,3,4,10,40]
-x=10
+# arr=[2,3,4,10,40]
+# x=10
 # result=binarySearch(arr,x)
 # if result !=-1:
 #     print("element is present at index-", result)
@@ -219,7 +219,7 @@ x=10
 # # print(binarySearch([1,2,3,4,5,6,7,8,9],7))
 
 # def binarySearch(arr,x):
-#     start,end=0,len(arr)
+#     start,end=0,len(arr)-1
 #     while start<=end:
 #         mid=start+(end-start)//2
 #         if arr[mid]==x:
@@ -231,15 +231,29 @@ x=10
 #     return -1
 # print(binarySearch([1,4,6,8,12,13,45,80],45))
 
-def binarySearch(arr,k):
-    start,finish=0,len(arr)
-    while start<=finish:
-        mid=start+(finish-start)//2
-        if arr[mid]==k:
+# def binarySearch(arr,k):
+#     start,finish=0,len(arr)-1
+#     while start<=finish:
+#         mid=start+(finish-start)//2
+#         if arr[mid]==k:
+#             return mid
+#         elif arr[mid]>k:
+#             finish=mid-1
+#         else:
+#             start=mid+1
+#     return "error"
+# print(binarySearch([1,2,3,4,5,6,7,8,9,10],5))
+
+
+def binarySearch(arr,s):
+    start,end=0,len(arr)-1
+    while start<=end:
+        mid=start+(end-start)//2
+        if arr[mid]==s:
             return mid
-        elif arr[mid]>k:
-            finish=mid-1
-        else:
+        elif arr[mid]<s:
             start=mid+1
-    return "error"
-print(binarySearch([1,2,3,4,5,6,7,8,9,10],5))
+        else:
+            end=mid-1
+    return -1
+print(binarySearch([1,3,5,7,9,11,13,15,17,19],3))
