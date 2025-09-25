@@ -1,0 +1,6 @@
+--------------------
+Date: 25:9:2025
+Time: 16:35
+Phone number: +919999999999
+Message: welcome to pywhatkit first message
+--------------------
