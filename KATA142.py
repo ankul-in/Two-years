@@ -18,7 +18,6 @@
 #     return alice
 
 #using dfs
-
 def card_game(n):
     from functools import lru_cache
 
@@ -37,6 +36,7 @@ def card_game(n):
             taken_half = (cards//2+dfs(1-turn,cards //2)) if turn ==0 else dfs(1-turn,cards//2)
             return max(taken_one,taken_half) if turn == 0 else min(taken_one,taken_half)
     return dfs(0,n)
+
 
 
 print(card_game(10))
