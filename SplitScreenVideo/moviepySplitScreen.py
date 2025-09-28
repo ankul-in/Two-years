@@ -1,3 +1,5 @@
+#https://youtu.be/WGEV8-ODYS8
+
 from moviepy.editor import *
 
 clip_1=VideoFileClip(r"D:\PY\SplitScreenVideo\a1.mov").subclip(0,5)
