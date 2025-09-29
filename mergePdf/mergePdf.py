@@ -8,5 +8,5 @@ for file in glob("*.pdf"):
     old_pdf=Pdf.open(file)
 
     new_pdf.pages.extend(old_pdf.pages)
-new_pdf.save(r"D:\PY\megePdf\demo.py")
+new_pdf.save("demo.pdf")
 
