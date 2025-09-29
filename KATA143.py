@@ -16,4 +16,16 @@
 #         return True
 #     return False
 
+def func_xor(a, b):
+    if bool(a) != bool(b):
+        return True
+    return False
+
+def func_or(a, b):
+    if bool(a) or bool(b):
+        return True
+    return False
+
+
+
 print(func_or(True, True))
