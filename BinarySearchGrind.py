@@ -257,3 +257,16 @@ def binarySearch(arr,s):
             end=mid-1
     return -1
 print(binarySearch([1,3,5,7,9,11,13,15,17,19],3))
+
+def binarySearch(arr,s):
+    start,end=0,len(arr)-1
+    while start<=end:
+        mid=start+(end-start)//2
+        if arr[mid]==s:
+            return mid
+        elif arr[mid]<s:
+            start=mid+1
+        elif arr[mid]>s:
+            end=mid-1
+    return -1
+print(binarySearch([1,3,5,6,7,8,9,11],6))
