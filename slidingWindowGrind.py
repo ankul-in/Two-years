@@ -329,6 +329,20 @@
 #     return maxSum
 # print(maxSum([5,6,3,-1,-4,5],4))
 
+# def maxSum(arr,k):
+#     n=len(arr)
+#     if n<k:
+#         print("invalid")
+#         return -1
+#     windowSum=sum(arr[:k])
+#     maxSum=windowSum
+#     for i in range(n-k):
+#         windowSum=windowSum-arr[i]+arr[i+k]
+#         maxSum=max(windowSum,maxSum)
+#     return maxSum
+# print(maxSum([8,0,2,0,0],3))
+
+
 def maxSum(arr,k):
     n=len(arr)
     if n<k:
@@ -339,5 +353,6 @@ def maxSum(arr,k):
     for i in range(n-k):
         windowSum=windowSum-arr[i]+arr[i+k]
         maxSum=max(windowSum,maxSum)
+
     return maxSum
-print(maxSum([8,0,2,0,0],3))
+print(maxSum([1,3,5,2,3,4],3))
