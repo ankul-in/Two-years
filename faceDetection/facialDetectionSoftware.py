@@ -1,8 +1,12 @@
 #https://youtu.be/JZZr0PjZsIk
 
 import cv2
-face_cap = cv2.CascadeClassifier(r"C:\Users\LENOVO\AppData\Local\Programs\Python\Python313\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml")
+
+# This automatically finds the correct path
+face_cap = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+#face_cap = cv2.CascadeClassifier(r"C:\Users\LENOVO\AppData\Local\Programs\Python\Python313\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml")
 video_cap = cv2.VideoCapture(0)
+print("press 'q' to quit")
 while True:
     ret , videoData = video_cap.read()
     col = cv2.cvtColor(videoData,cv2.COLOR_BGR2GRAY)
@@ -17,7 +21,7 @@ while True:
     for(x,y,w,h) in faces:
         cv2.rectangle(videoData,(x,y),(x+w,y+h),(135, 206, 235),2)
     cv2.imshow("videoLive",videoData)
-    if cv2.waitKey(10) == ord("a"):
+    if cv2.waitKey(10) == ord("q"):
         break
 video_cap.release()
 
