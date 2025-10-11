@@ -1,6 +1,6 @@
 #sliding window grind  
 #163
-
+#[arr[i:i+k] for i in range(len(arr) - k + 1)]
 # def maxSum(arr, k):
     
 #     # length of the array
@@ -452,16 +452,36 @@
 # print(maxSum([-1,-2,-3,-4,-5],-1))
 
 
-def maxSum(arr,k):
-    n=len(arr)
-    if n<k:
-        print("invalid")
-        return -1
-    windowSum=sum(arr[:k])
-    maxSum=windowSum
-    for i in range(n-k):
-        windowSum=windowSum-arr[i]+arr[i+k]
-        maxSum=max(windowSum,maxSum)
+# def maxSum(arr,k):
+#     n=len(arr)
+#     if n<k:
+#         print("invalid")
+#         return -1
+#     windowSum=sum(arr[:k])
+#     maxSum=windowSum
+#     for i in range(n-k):
+#         windowSum=windowSum-arr[i]+arr[i+k]
+#         maxSum=max(windowSum,maxSum)
 
-    return maxSum
-print(maxSum([-1,0,2,-2,0],4))
+#     return maxSum
+# print(maxSum([-1,0,2,-2,0],4))
+
+
+# def maxSum(arr,k):
+#     n=len(arr)
+#     if n<k:
+#         print("invalid")
+#         return -1
+#     windowSum=sum(arr[:k])
+#     maxSum=windowSum
+#     for i in range(n-k):
+#         windowSum=windowSum-arr[i]+arr[i+k]
+#         maxSum=max(windowSum,maxSum)
+
+#     return maxSum
+# print(maxSum([-1,0,2,-2,0],4))
+
+
+def maxSum(arr,k):
+    return max([sum(arr[i:i+k]) for i in range(len(arr) - k + 1)])
+print(maxSum([1,2,3,4,5,6,7,8],2))
