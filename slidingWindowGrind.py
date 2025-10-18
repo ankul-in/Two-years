@@ -514,6 +514,11 @@
 # print(maxSum([1,3,2,4,5,6,7],2))
 
 
+# def maxSum(arr,k):
+#     return max([sum(arr[i:i+k]) for i in range(len(arr)-k+1)])
+# print(maxSum([0,2,1,-6,-2,-1,4],4))
+
+
 def maxSum(arr,k):
     return max([sum(arr[i:i+k]) for i in range(len(arr)-k+1)])
 print(maxSum([0,2,1,-6,-2,-1,4],4))
