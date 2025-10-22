@@ -509,6 +509,20 @@
 # print(binarySearch([1,2,3,4,5],6))
 
 
+# def binarySearch(arr,k):
+#     start,end=0,len(arr)-1
+#     while start<=end:
+#         mid=start+(end-start)//2
+#         if arr[mid]==k:
+#             return mid
+#         elif arr[mid]<k:
+#             start=mid+1
+#         else:
+#             end=mid-1
+#     return -1
+# print(binarySearch([-10,-9,-8,-7,-6,-5,-4,-3,-2],-6))
+
+
 def binarySearch(arr,k):
     start,end=0,len(arr)-1
     while start<=end:
@@ -520,4 +534,4 @@ def binarySearch(arr,k):
         else:
             end=mid-1
     return -1
-print(binarySearch([-10,-9,-8,-7,-6,-5,-4,-3,-2],-6))
+print(binarySearch([1,2,3,4,5,6],6))
