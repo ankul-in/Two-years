@@ -1132,6 +1132,32 @@
 #     print(i,end="-->")
 
 
+# from collections import deque
+# def bfsOfGraph(adj,s,visited,res):
+#     q=deque()
+#     visited[s]=True
+#     q.append(s)
+#     while q:
+#         curr=q.popleft()
+#         res.append(curr)
+#         for x in adj[curr]:
+#             if not visited[x]:
+#                 visited[x]=True
+#                 q.append(x)
+#     return res
+# def bfsDisconnected(adj):
+#     V=len(adj)
+#     res=[]
+#     visited=[False]*V
+#     for i in range(V):
+#         bfsOfGraph(adj,i,visited,res)
+#     return res
+# adj=[[7,3],[6,2],[4,1],[3,1],[],[],[],[]]
+# ans=bfsDisconnected(adj)
+# for i in ans:
+#     print(i,end="-->")
+
+
 from collections import deque
 def bfsOfGraph(adj,s,visited,res):
     q=deque()
