@@ -2402,6 +2402,36 @@
 
 
 
+# from collections import defaultdict
+# def addEdge(adj,s,t):
+#     adj[s].append(t)
+#     adj[t].append(s)
+# def dfsRes(adj,visited,s,res):
+#     if visited[s]:
+#         return
+#     visited[s]=True
+#     res.append(s)
+#     for i in adj[s]:
+#         dfsRes(adj,visited,i,res)
+# def dfs(adj):
+#     all_node=set(adj.keys())
+#     for neighbors in adj.values():
+#         all_node.update(neighbors)
+#     visited={node:False for node in all_node}
+#     res=[]
+#     for node in all_node:
+#         if not visited[node]:
+#             dfsRes(adj,visited,node,res)
+#     return res
+# adj=defaultdict(list)
+# edges=[[1,2],[2,0],[0,3],[4,5]]
+# for e in edges:
+#     addEdge(adj,e[0],e[1])
+# res=dfs(adj)
+# print("-->".join(map(str,res)))
+
+
+
 from collections import defaultdict
 def addEdge(adj,s,t):
     adj[s].append(t)
